@@ -1,16 +1,16 @@
 Solution steps:
-•	Step 1 : Creating a Security Group
+#Step 1 : Creating a Security Group
 •	Log onto a Domain Controller, open Active Directory Users and Computers (dsa.msc).
 •	Create a security Group name it Local Admin. From Menu Select Action | New | Group.
 •	Name the group as Local Admin.
 •	Add the Help Desk members to Local Admin group.
  
-•	Step 2: Create Group Policy
+#Step 2: Create Group Policy
 •	Open Group Policy Management Console ( gpmc.msc ).
 •	Right click on Group Policy Objects and select New.
 •	Type the name of the policy "Local Admin GPO"
  
-•	Step 3: Configure the policy to add the “Local Admin” group as Administrators
+#Step 3: Configure the policy to add the “Local Admin” group as Administrators
 •	Right click “Local Admin GPO” Policy then select Edit.
 •	Expand Computer configuration\Policies\Windows Settings\Security Settings\Restricted Groups
 •	In the Left pane on Restricted Groups, Right Click and select “Add Group“
@@ -21,7 +21,7 @@ Solution steps:
 •	Add “Remote Desktop Users”
 •	Click OK twice
  
-•	Step 4: Linking GPO
+#Step 4: Linking GPO
 •	In Group policy management console, right click on the domain or the OU and select Link an Existing GPO
 •	Select the Local Admin GPO
  

@@ -1,0 +1,24 @@
+1.	Prepare the Image: Ensure the image you want to set as the lock screen wallpaper is accessible from the network location that all users can reach.
+2.	Group Policy Object Creation: 
+o	Open the Group Policy Management Console (GPMC) on a domain controller.
+o	Create a new Group Policy Object (GPO) or use an existing one where you want to apply this setting.
+3.	Edit the Group Policy: 
+o	Right-click on the created GPO and select Edit.
+o	Navigate to Computer Configuration -> Preferences -> Windows Settings -> Registry.
+o	Right-click in the right pane and select New -> Registry Item.
+4.	Set Registry Value: 
+o	In the "New Registry Properties" dialog, set the following values: 
+	Action: Update
+	Hive: HKEY_LOCAL_MACHINE
+	Key Path: SOFTWARE\Microsoft\Windows\CurrentVersion\PersonalizationCSP
+	Value name: LockScreenImagePath (Create this value if it doesn't exist)
+	Value type: REG_SZ
+	Value data: Path to the image file (e.g., \server\share\image.jpg)
+5.	Deploy the Group Policy: 
+o	Link the GPO to the Organizational Unit (OU) containing the target computers.
+o	Allow time for the Group Policy to propagate to the target computers.
+6.	Update Group Policy on Clients: 
+o	Run gpupdate /force on the client machines to force an immediate Group Policy update.
+7.	Verify: 
+o	Lock any user session on a target machine to see if the lock screen wallpaper has been updated.
+

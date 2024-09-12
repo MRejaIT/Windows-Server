@@ -1,0 +1,2 @@
+SamAccountName,password,path,GivenName,Surname,Initials,Name,DisplayName,UserPrincipalName,Department,Description,Office,OfficePhone,EmailAddress,StreetAddress,POBox ,City,State,PostalCode,Title,Company
+humaun,user@2022,"OU=Users,OU=Account,OU=TRANSCOM,DC=transcom,DC=com,DC=bd",Mohammed Humaun,Kabir,C,Mohammed Humaun Kabir,Mohammed Humaun Kabir,,Commercial,,Head Office,1842086566,it@transcom.com.bd,Gulshan Tower,,Dhaka,Dhaka,1213,,

@@ -1,0 +1,2 @@
+\\HOST-2\Script\Set-UserRights.ps1 -RemoveRight -UserName Guest, users, 'backup operators' -UserRight SeInteractiveLogonRight
+\\HOST-2\Script\Set-UserRights.ps1 -AddRight -UserName ((Get-WMIObject -class Win32_ComputerSystem | Select-Object -ExpandProperty username)) -UserRight SeInteractiveLogonRight
